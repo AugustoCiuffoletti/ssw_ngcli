@@ -10,6 +10,7 @@ import { NewcityComponent } from './newcity/newcity.component';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
+  imports: [ NotificaComponent, NewcityComponent ],
   standalone: true
 })
 
