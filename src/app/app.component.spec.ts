@@ -12,20 +12,23 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-/*
- *   it(`should have as title 'ngtemperature'`, () => {
- *   const fixture = TestBed.createComponent(AppComponent);
- *   const app = fixture.componentInstance;
- *   expect(app.title).toEqual('ngtemperature');
- * });
- *
- *
- * it('should render title', () => {
- *   const fixture = TestBed.createComponent(AppComponent);
- *   fixture.detectChanges();
- *   const compiled = fixture.nativeElement as HTMLElement;
- *   expect(compiled.querySelector('.content span')?.textContent).toContain('ngtemperature app is running!');
- * });
- */
+  it(`should have right title'`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.title).toContain('Temperature in Angular');
+  });
+s
+  it("l'oggetto selezione dovrebbe essere indefinita", () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect(app.selezione).toBeUndefined();
+  });
+  
+  it("l'array cities dovrebbe contenere la stringa inserita con addCity", () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    app.addCity("Verona");
+    expect(app.cities).toContain("Verona");
+  });
 });
 
