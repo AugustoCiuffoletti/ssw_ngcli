@@ -17,7 +17,7 @@ describe('AppComponent', () => {
     const app = fixture.componentInstance;
     expect(app.title).toContain('Temperature in Angular');
   });
-s
+
   it("l'oggetto selezione dovrebbe essere indefinita", () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
